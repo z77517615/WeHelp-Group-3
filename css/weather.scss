@@ -5,7 +5,6 @@
     padding: 0px;
     margin:0px;
     box-sizing: border-box;
-    font-size: 16px;
     font-family: 'Inter', sans-serif,'Noto Sans TC', sans-serif;
 }
 body{
@@ -37,7 +36,7 @@ main{
             transform: translatey(-50%);
             width: 600px;
             .temperature{
-                font-size: 7rem;
+                font-size: 11vmin;
                 color: whitesmoke;
                 font-weight: bolder;
     
@@ -46,42 +45,39 @@ main{
                 display: flex;
                 flex-wrap: wrap;
                 .location{
-                    font-size: 4.5rem;
+                    font-size: 8vmin;
                     color: whitesmoke;
                 }
                 .weather{
                     margin-left: 10px;
-                    font-size: 4.5rem;
+                    font-size: 8vmin;
                     color: whitesmoke;
                 }
             }
             
             .datetime{
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                width: 45%;
                 .date{
-                    font-size: 2.5rem;
+                    font-size: 6vmin;
                     color: whitesmoke;
                 }
                 .time{
-                    font-size: 2.5rem;
+                    font-size: 6vmin;
                     color: whitesmoke;
                     padding-top: 5px;
+                    margin-left: 10px;
                 }
             }
             .rain{
                 display: flex;
                 align-items: center;
-                width: 30%;
-                justify-content: space-between;
                 
                 .rain-icon{
-                    width: 80px;
+                    width: 10vmin;
                 }
                 .rain-probability{
-                    font-size: 2.5rem;
+                    font-size: 6vmin;
                     color: whitesmoke;
                     font-weight: 700;
                     letter-spacing: 3px;
@@ -104,7 +100,7 @@ footer{
         text-align: center;
         color: rgb(255, 255, 255);
         padding: 5px 20px;
-        font-size: 1rem;
+        font-size: 1vmin;
         background:rgba(0, 0, 0, 0.511);
         border-radius: 30px;
         width: fit-content;
@@ -147,47 +143,26 @@ footer{
                 left: 0%;
                 .temperature{
                     text-align: center;
-                    font-size: 5rem;
                 }
                 .location-weather{
                     width: fit-content;
                     justify-content: center;                    
-                    .location{
-                        font-size: 4.5rem;
-                    }
                     .weather{
-                        margin-left: 15px;
-                        font-size: 4.5rem;
+                        margin-left: 10px;
                     }
                 }
                 
                 .datetime{
                     width:fit-content;
                     .date{
-                        font-size: 3rem;
                         padding-left: 0;
-                    }
-                    .time{
-                        margin-left: 25px;
-                        font-size: 3rem;
                     }
                 }
                 .rain{
                     width:fit-content;
                     justify-content:flex-start;
-                    .rain-icon{
-                        width: 60px;
-                    }
-                    .rain-probability{
-                        font-size: 2.5rem;
-                    }
                 }
             }  
-        }
-    }
-    footer{
-        p{
-            font-size: 1rem;
         }
     }
 }
@@ -214,47 +189,39 @@ footer{
                 left: 0%;
                 .temperature{
                     text-align: center;
-                    font-size: 3.5rem;
+                    font-size: 14vmin;
                 }
                 .location-weather{
                     width: fit-content;                     
                     .location{
-                        font-size: 3rem;
+                        font-size: 9vmin;
                     }
                     .weather{
-                        margin-left: 10px;
-                        font-size: 3rem;
+                        font-size: 9vmin;
                     }
                 }
                 
                 .datetime{
                     width:fit-content;
                     .date{
-                        font-size: 2rem;
+                        font-size: 8vmin;
                         padding-left: 0;
                     }
                     .time{
-                        margin-left: 20px;
                         padding-top: 0px;
-                        font-size: 2rem;
+                        font-size: 8vmin;
                     }
                 }
                 .rain{
-                    // width:245px;
                     justify-content:flex-start;
                     .rain-icon{
-                        width: 50px;
+                        width: 11vmin;
                     }
                     .rain-probability{
-                        font-size: 2rem;
+                        font-size: 8vmin;
                     }
                 }
             }  
-        }
-    }
-    footer{
-        p{
-            font-size: 1rem;
         }
     }
 }
