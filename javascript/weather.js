@@ -109,7 +109,7 @@ getWeatherApi().then((res) => {
 
         // insert background image
         let main = document.querySelector("main");
-        main.style.backgroundImage = `url('../weatherImage/params-${weatherValue[index][0]}.jpeg')`;
+        main.style.backgroundImage = `url('/weatherImage/params-${weatherValue[index][0]}.jpeg')`;
     }
 
     // insert taipei data into index.html by default
