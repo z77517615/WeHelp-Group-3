@@ -105,7 +105,7 @@ getWeatherApi().then((res) => {
         let div_rainProbability = document.querySelector(
             "div.rain-probability"
         );
-        div_rainProbability.innerText = `${rain[index][0]}`;
+        div_rainProbability.innerText = `${rain[index][0]}%`;
 
         // insert background image
         let main = document.querySelector("main");
