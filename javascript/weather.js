@@ -18,7 +18,7 @@ getWeatherApi().then((res) => {
     // stored data into different variables
     for (let i = 0; i < 22; i++) {
         // LOCATION
-        location.push(res.records.location[i].locationName.slice(0, 2));
+        location.push(res.records.location[i].locationName);
 
         // WEATHER Name
         let weatherNameSeperate = [];
@@ -92,15 +92,6 @@ getWeatherApi().then((res) => {
         let div_date = document.querySelector("div.date");
         div_date.innerText = `${month}月${date}日`;
 
-        // insert time
-        let div_time = document.querySelector("div.time");
-        let time = new Date().toLocaleTimeString("en-US", {
-            hour12: false,
-            hour: "numeric",
-            minute: "numeric",
-        });
-        div_time.innerText = time;
-
         // insert rain probability
         let div_rainProbability = document.querySelector(
             "div.rain-probability"
@@ -113,12 +104,29 @@ getWeatherApi().then((res) => {
     }
 
     // insert taipei data into index.html by default
-    insertWeather("臺北");
+    insertWeather("臺北市");
 
     // change data when click different city
     let div_sideMenu = document.querySelector("div.side-menu");
     div_sideMenu.addEventListener("click", (e) => {
-        let city = e.target.innerText.slice(0, 2);
+        let city = e.target.innerText;
         insertWeather(city);
     });
 });
+
+// insert time
+function insertTime() {
+    let div_time = document.querySelector("div.time");
+    let time = new Date().toLocaleTimeString("en-US", {
+        hour12: false,
+        hour: "numeric",
+        minute: "numeric",
+    });
+    div_time.innerText = time;
+}
+
+insertTime();
+
+setInterval(() => {
+    insertTime();
+}, 1000);
