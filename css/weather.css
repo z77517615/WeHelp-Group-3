@@ -54,10 +54,8 @@ main .filter .weather-info .location-weather {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 55%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .filter .weather-info .location-weather .location {
@@ -66,6 +64,7 @@ main .filter .weather-info .location-weather .location {
 }
 
 main .filter .weather-info .location-weather .weather {
+  margin-left: 10px;
   font-size: 4.5rem;
   color: whitesmoke;
 }
@@ -206,13 +205,16 @@ footer p {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   main .filter .weather-info .location-weather .location {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   main .filter .weather-info .location-weather .weather {
     margin-left: 15px;
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   main .filter .weather-info .datetime {
     width: -webkit-fit-content;
@@ -228,7 +230,9 @@ footer p {
     font-size: 3rem;
   }
   main .filter .weather-info .rain {
-    width: 340px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -238,6 +242,77 @@ footer p {
   }
   main .filter .weather-info .rain .rain-probability {
     font-size: 2.5rem;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main .filter .title {
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    color: whitesmoke;
+    padding-left: 25px;
+    padding-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 60px;
+  }
+  main .filter .weather-info {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    left: 0%;
+  }
+  main .filter .weather-info .temperature {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  main .filter .weather-info .location-weather {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main .filter .weather-info .location-weather .location {
+    font-size: 3rem;
+  }
+  main .filter .weather-info .location-weather .weather {
+    margin-left: 10px;
+    font-size: 3rem;
+  }
+  main .filter .weather-info .datetime {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main .filter .weather-info .datetime .date {
+    font-size: 2rem;
+    padding-left: 0;
+  }
+  main .filter .weather-info .datetime .time {
+    margin-left: 20px;
+    font-size: 2rem;
+  }
+  main .filter .weather-info .rain {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main .filter .weather-info .rain .rain-icon {
+    width: 50px;
+  }
+  main .filter .weather-info .rain .rain-probability {
+    font-size: 2rem;
   }
   footer p {
     font-size: 1rem;
