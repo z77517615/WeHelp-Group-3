@@ -99,8 +99,13 @@ getWeatherApi().then((res) => {
         div_rainProbability.innerText = `${rain[index][0]}%`;
 
         // insert background image
-        let main = document.querySelector("main");
-        main.style.backgroundImage = `url('../weatherImage/params-${weatherValue[index][0]}.jpeg')`;
+        if (weatherValue[index][0] > 11) {
+            let main = document.querySelector("main");
+            main.style.backgroundImage = `url('../weatherImage/raining.jpeg')`;
+        } else {
+            let main = document.querySelector("main");
+            main.style.backgroundImage = `url('../weatherImage/params-${weatherValue[index][0]}.jpeg')`;
+        }
     }
 
     // insert taipei data into index.html by default
