@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700&family=Noto+Sans+TC:wght@100;300;500;700&display=swap');
+
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif,'Noto Sans TC', sans-serif;
+}
+body{
+    position: relative;
+}
+
+main{
+    background-repeat: no-repeat;
+    background-size: cover ;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    .filter{
+        background: rgba(80, 80, 80, 0.367);
+        width: 100%;
+        height: 100%;
+
+        .title{
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            color: whitesmoke;
+            padding-left: 5px;
+         }
+        .weather-info{
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translatey(-50%);
+            width: 600px;
+            .temperature{
+                font-size: 7rem;
+                color: whitesmoke;
+                font-weight: bolder;
+    
+            }
+            .location-weather{
+                display: flex;
+                flex-wrap: wrap;
+                .location{
+                    font-size: 4.5rem;
+                    color: whitesmoke;
+                }
+                .weather{
+                    margin-left: 10px;
+                    font-size: 4.5rem;
+                    color: whitesmoke;
+                }
+            }
+            
+            .datetime{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 45%;
+                .date{
+                    font-size: 2.5rem;
+                    color: whitesmoke;
+                }
+                .time{
+                    font-size: 2.5rem;
+                    color: whitesmoke;
+                    padding-top: 5px;
+                }
+            }
+            .rain{
+                display: flex;
+                align-items: center;
+                width: 30%;
+                justify-content: space-between;
+                
+                .rain-icon{
+                    width: 80px;
+                }
+                .rain-probability{
+                    font-size: 2.5rem;
+                    color: whitesmoke;
+                    font-weight: 700;
+                    letter-spacing: 3px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+footer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    bottom: 0px;
+    p{
+        position: absolute;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding: 5px 20px;
+        font-size: 1rem;
+        background:rgba(0, 0, 0, 0.511);
+        border-radius: 30px;
+        width: fit-content;
+        animation: float 1s;
+        box-shadow: 0px 3px 20px  rgba(0, 0, 0, 0.237);
+    }
+}
+
+@keyframes float{
+    0%{
+        opacity: 0;
+        bottom: 0px;
+    }
+    100%{
+        bottom: 10px;
+    }
+}
+
+
+
+@media screen and (max-width:820px){
+    main{
+        .filter{ 
+            .title{
+                position: absolute;
+                top: 0px;
+                left: 0%;
+                color: whitesmoke;
+                padding-left: 20px;
+                padding-top: 20px;
+                background: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                height: 60px;
+            }   
+            .weather-info{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                left: 0%;
+                .temperature{
+                    text-align: center;
+                    font-size: 5rem;
+                }
+                .location-weather{
+                    width: fit-content;
+                    justify-content: center;                    
+                    .location{
+                        font-size: 4.5rem;
+                    }
+                    .weather{
+                        margin-left: 15px;
+                        font-size: 4.5rem;
+                    }
+                }
+                
+                .datetime{
+                    width:fit-content;
+                    .date{
+                        font-size: 3rem;
+                        padding-left: 0;
+                    }
+                    .time{
+                        margin-left: 25px;
+                        font-size: 3rem;
+                    }
+                }
+                .rain{
+                    width:fit-content;
+                    justify-content:flex-start;
+                    .rain-icon{
+                        width: 60px;
+                    }
+                    .rain-probability{
+                        font-size: 2.5rem;
+                    }
+                }
+            }  
+        }
+    }
+    footer{
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width:450px){
+    main{
+        .filter{ 
+            .title{
+                position: absolute;
+                top: 0px;
+                left: 0%;
+                color: whitesmoke;
+                padding-left: 25px;
+                padding-top: 20px;
+                background: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                height: 60px;
+            }   
+            .weather-info{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                left: 0%;
+                .temperature{
+                    text-align: center;
+                    font-size: 3.5rem;
+                }
+                .location-weather{
+                    width: fit-content;                     
+                    .location{
+                        font-size: 3rem;
+                    }
+                    .weather{
+                        margin-left: 10px;
+                        font-size: 3rem;
+                    }
+                }
+                
+                .datetime{
+                    width:fit-content;
+                    .date{
+                        font-size: 2rem;
+                        padding-left: 0;
+                    }
+                    .time{
+                        margin-left: 20px;
+                        font-size: 2rem;
+                    }
+                }
+                .rain{
+                    // width:245px;
+                    justify-content:flex-start;
+                    .rain-icon{
+                        width: 50px;
+                    }
+                    .rain-probability{
+                        font-size: 2rem;
+                    }
+                }
+            }  
+        }
+    }
+    footer{
+        p{
+            font-size: 1rem;
+        }
+    }
+}
